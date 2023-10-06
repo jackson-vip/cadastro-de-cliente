@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --dk-gray-100: #F3F4F6;
+    --dk-gray-200: #E5E7EB;
+    --dk-gray-300: #D1D5DB;
+    --dk-gray-400: #9CA3AF;
+    --dk-gray-500: #6B7280;
+    --dk-gray-600: #4B5563;
+    --dk-gray-700: #374151;
+    --dk-gray-800: #1F2937;
+    --dk-gray-900: #111827;
+    --dk-dark-bg: #313348;
+    --dk-darker-bg: #2a2b3d;
+    --navbar-bg-color: #6f6486;
+    --sidebar-bg-color: #252636;
+    --sidebar-width: 250px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: .885rem;
+}
+
+body {
+    background-color: var(--dk-gray-900);
+    font-family: 'Inter', sans-serif;
+
+    &>* {
+        background-color: var(--dk-gray-800);
+        color: var(--dk-gray-100);
+    }
+}
+
+.container {
+    box-shadow: 0 0 16px .5px rgba(238, 239, 239, 0.641);
+    transition: box-shadow 0.3s ease;
+}
+
+#formCadUser input {
+    color: var(--dk-gray-800);
+    border: none;
+    box-shadow: none;
+}
+
+#formCadUser input:focus {
+    box-shadow: 0 0 5px 1.6px rgba(238, 239, 239, 0.641);
+    transition: box-shadow .3s ease;
+}
+
+#formCadUser .input-focado {
+    box-shadow: 0 0 8px 2.5px rgba(255, 169, 99, 0.759);
+    transition: box-shadow .5s ease .2s;
+}
+
+#genero,
+#estadoCivil,
+#ufExp,
+#textArea,
+#uf {
+    color: var(--dk-gray-800);
+    border: none;
+    box-shadow: none;
+}
+
+#genero:focus,
+#estadoCivil:focus,
+#ufExp:focus,
+#textArea:focus,
+#uf:focus {
+    box-shadow: 0 0 5px 1.6px rgba(238, 239, 239, 0.641);
+    transition: box-shadow .3s ease;
+}
+
+#cpf,
+#cnh,
+#rg,
+#cel-1,
+#cel-2 {
+    min-width: 160px;
+}
+
+#orgaoExp,
+#numero {
+    max-width: 100px;
+}
+
+#ufExp,
+#uf {
+    max-width: 80px;
+}
+
+#formCadUser .sapnColor {
+    color: #e85d04;
+}
+
+/* Campo imagem (Alteração Foto de Usuário) */
+.img-user {
+    width: 80px;
+    height: 120px;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.img-user img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Trabalhando com Media Query do CSS */
+@media (min-width: 768px) {
+
+    #ufExp,
+    #uf {
+        max-width: none;
+    }
+}
+
+@media (max-width: 412px) {
+    .genero {
+        flex-grow: 1
+    }
+
+    .orgaoExp {
+        flex-grow: 1
+    }
+
+    #orgaoExp {
+        flex-grow: 2
+    }
+
+    .ufExp {
+        flex-grow: 1
+    }
+
+    #ufExp {
+        max-width: none;
+        flex-grow: 1;
+    }
+
+    .dataNasc {
+        flex-grow: 1
+    }
+
+    .cep,
+    .bairro,
+    .cidade,
+    .complemento,
+    .referencia {
+        flex-grow: 1;
+    }
+
+    .fieldBtn {
+        flex-direction: column;
+    }
+
+    .btnStyle {
+        margin: 0 !important;
+    }
+
+    .btn-success {
+        margin-top: 2rem !important;
+    }
+}
